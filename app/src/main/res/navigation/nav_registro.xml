@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_registro"
+    app:startDestination="@id/ingresarDatosFragment">
+
+    <fragment
+        android:id="@+id/ingresarDatosFragment"
+        android:name="com.example.android.renters.fragments.IngresarDatosFragment"
+        android:label="fragment_ingresar_datos"
+        tools:layout="@layout/fragment_ingresar_datos" >
+        <action
+            android:id="@+id/datos_ingresados"
+            app:destination="@id/enviarCorreoFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/enviarCorreoFragment"
+        android:name="com.example.android.renters.fragments.EnviarCorreoFragment"
+        android:label="fragment_enviar_correo"
+        tools:layout="@layout/fragment_enviar_correo" />
+</navigation>
